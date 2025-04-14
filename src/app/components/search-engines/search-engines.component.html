@@ -1,1 +1,11 @@
 <!-- http://www.omdbapi.com/?t=star&apikey=abe1a2d8 -->
+ <input type="text" [(ngModel)]="searchText">
+ <button (click)="search()">Search</button>
+ <div *ngIf="searchText">
+   <h2>Search Results for "{{ searchText }}"</h2>
+   <div *ngFor="let movie of searchResults">
+     <h3>{{ movie.Title }}</h3>
+     <p>Year: {{ movie.Year }}</p>
+     <p>Genre: {{ movie.Genre }}</p>
+    </div>
+  </div>
