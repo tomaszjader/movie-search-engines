@@ -5,7 +5,7 @@ import { MovieCardComponent } from "./components/movie-card/movie-card.component
 
 @Component({
     selector: 'app-root',
-    imports: [RouterOutlet, SearchEnginesComponent, MovieCardComponent],
+    imports: [RouterOutlet, SearchEnginesComponent],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss'
 })
