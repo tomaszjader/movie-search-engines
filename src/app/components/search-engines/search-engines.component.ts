@@ -27,6 +27,12 @@ import { MatIconModule } from '@angular/material/icon';
 export class SearchEnginesComponent {
   constructor(private http: HttpClient) {}
 
+  onEnterPress(event: KeyboardEvent) {
+    if (event.key === 'Enter') {
+      this.search();
+    }
+  }
+
   search() {
     if (this.searchText.trim() !== '') {
       this.http.get(`http://www.omdbapi.com/?apikey=abe1a2d8&s=${this.searchText}`)
