@@ -35,7 +35,7 @@ export class SearchEnginesComponent {
 
   search() {
     if (this.searchText.trim() !== '') {
-      this.http.get(`http://www.omdbapi.com/?apikey=abe1a2d8&s=${this.searchText}`)
+      this.http.get(`https://www.omdbapi.com/?apikey=abe1a2d8&s=${this.searchText}`)
         .subscribe((response: any) => {
           if (response.Search) {
             this.searchResults = response.Search;
