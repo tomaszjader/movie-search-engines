@@ -7,6 +7,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import {MatTableModule} from '@angular/material/table';
 
 @Component({
   selector: 'app-search-engines',
@@ -19,12 +20,14 @@ import { MatIconModule } from '@angular/material/icon';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatTableModule
   ],
   templateUrl: './search-engines.component.html',
   styleUrl: './search-engines.component.scss'
 })
 export class SearchEnginesComponent {
+  displayedColumns: string[] = ['Type', 'Title', 'Year', 'Image'];
   constructor(private http: HttpClient) {}
 
   onEnterPress(event: KeyboardEvent) {
