@@ -18,7 +18,7 @@ export class MovieService {
       switchMap(searchResult => {
         const searchResults = searchResult?.Search;
         if (!searchResults || searchResults.length === 0) {
-          return of([]); // brak wyników
+          return of([]);
         }
 
         const requests = searchResults.map((item: any) =>

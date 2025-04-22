@@ -29,8 +29,7 @@ import { Movie } from './../../services/movie.model';
   styleUrl: './search-engines.component.scss'
 })
 export class SearchEnginesComponent {
-  displayedColumns: string[] = ['Image', 'Title', 'Year','Runtime','Genre',
-    'Director','Plot'];
+  displayedColumns: string[] = ['Image', 'Title', 'Year','Runtime','Genre','Director','Plot'];
   constructor(private http: HttpClient,private movieService: MovieService) {}
 
   onEnterPress(event: KeyboardEvent) {
@@ -38,19 +37,6 @@ export class SearchEnginesComponent {
       this.search();
     }
   }
-
-  // search() {
-  //   if (this.searchText.trim() !== '') {
-  //     this.http.get(`https://www.omdbapi.com/?apikey=abe1a2d8&s=${this.searchText}`)
-  //       .subscribe((response: any) => {
-  //         if (response.Search) {
-  //           this.searchResults = response.Search;
-  //           console.log(this.searchResults);
-  //         } else {
-  //           this.searchResults = [];}
-  //       });
-  //   }
-  // }
 
   searchText = '';
   searchResults: any[] = [];
@@ -62,5 +48,5 @@ export class SearchEnginesComponent {
     this.movieService.getMoviesByTitles(titles).subscribe(movies => {
       this.movies = movies;
     });
-}
+  }
 }
