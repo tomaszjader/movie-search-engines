@@ -1,5 +1,5 @@
 <div class="flex justify-center items-center flex-col">
-  <h1 class="text-4xl font-bold mb-4">Search Engines</h1>
+  <h1 class="text-4xl font-bold mb-4 mt-4">Search Engines</h1>
 
   <mat-form-field appearance="outline" class="w-[400px]">
     <mat-label>Search movies</mat-label>
@@ -17,22 +17,22 @@
 
 
       <ng-container matColumnDef="Image">
-        <th mat-header-cell *matHeaderCellDef> Image </th>
+        <th mat-header-cell *matHeaderCellDef class="font-bold"> Image </th>
         <td mat-cell *matCellDef="let element"><img width="200" src="{{element['Poster']}}" alt="" srcset="">  </td>
       </ng-container>
 
       <ng-container matColumnDef="Title">
-        <th mat-header-cell *matHeaderCellDef>Title</th>
-        <td mat-cell *matCellDef="let element"> {{element['Title']}} </td>
+        <th mat-header-cell *matHeaderCellDef>Title<mat-icon>arrow_drop_down</mat-icon><mat-icon>arrow_drop_up</mat-icon></th>
+        <td mat-cell *matCellDef="let element" class="font-bold"> {{element['Title']}} </td>
       </ng-container>
 
       <ng-container matColumnDef="Year">
-        <th mat-header-cell *matHeaderCellDef> Year </th>
+        <th mat-header-cell *matHeaderCellDef> Year <mat-icon>arrow_drop_down</mat-icon><mat-icon>arrow_drop_up</mat-icon></th>
         <td mat-cell *matCellDef="let element"> {{element["Year"]}} </td>
       </ng-container>
 
       <ng-container matColumnDef="Runtime">
-        <th mat-header-cell *matHeaderCellDef>Runtime</th>
+        <th mat-header-cell *matHeaderCellDef>Runtime<mat-icon>arrow_drop_down</mat-icon><mat-icon>arrow_drop_up</mat-icon></th>
         <td mat-cell *matCellDef="let element"> {{element['Runtime']}} </td>
       </ng-container>
 
@@ -42,7 +42,7 @@
       </ng-container>
 
       <ng-container matColumnDef="Director">
-        <th mat-header-cell *matHeaderCellDef>Director</th>
+        <th mat-header-cell *matHeaderCellDef>Director <mat-icon>arrow_drop_down</mat-icon><mat-icon>arrow_drop_up</mat-icon></th>
         <td mat-cell *matCellDef="let element"> {{element['Director']}} </td>
       </ng-container>
     
