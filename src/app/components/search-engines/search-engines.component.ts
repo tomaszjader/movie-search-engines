@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { MovieCardComponent } from '../movie-card/movie-card.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -15,8 +14,6 @@ import { Movie } from './../../services/movie.model';
   selector: 'app-search-engines',
   standalone: true,
   imports: [
-    MovieCardComponent, 
-    HttpClientModule, 
     FormsModule,
     CommonModule,
     MatFormFieldModule,
