@@ -6,5 +6,6 @@ export interface Movie {
     Director: string;
     Plot: string;
     Poster: string;
+    Type: string;
   }
   
